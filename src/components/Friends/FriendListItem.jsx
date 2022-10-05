@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
+import s from '../Friends/Friends.module.css';
+
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <li class="item">
+    <li className={s.item}>
       <span
         style={{
           display: 'block',
@@ -10,12 +12,12 @@ const FriendListItem = ({ avatar, name, isOnline }) => {
           borderRadius: '50%',
           backgroundColor: isOnline ? 'green' : 'red',
         }}
-        class="status"
+        className={s.status}
       >
         {isOnline}
       </span>
-      <img class="avatar" src={avatar} alt="User avatar" width="48" />
-      <p class="name">{name}</p>
+      <img className={s.avatar} src={avatar} alt="User avatar" width="48" />
+      <p className={s.name}>{name}</p>
     </li>
   );
 };
